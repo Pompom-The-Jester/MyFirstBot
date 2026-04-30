@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Chatbot IA - by Gemma</title>
+  <title>My First Bot</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 650px; margin: 40px auto; padding: 0 20px; background-color: #f0f4f8; }
     h2 { color: #1565C0; text-align: center; }
@@ -19,27 +19,27 @@
   </style>
 </head>
 <body>
-  <h2>🤖 Mi asistente IA - by Gemma</h2>
+  <h2>My First Bot</h2>
 
   <div id="key-zone">
-    🔑 <b>Pega aquí tu API Key de Groq</b> (no se guarda ni se sube a ningún sitio):
+    🔑 <b>Pega aquí el código</b> (no se guarda ni se sube a ningún sitio):
     <input type="password" id="api-key" placeholder="gsk_..." />
   </div>
 
   <div id="chat"></div>
   <div class="controles">
-    <input id="entrada" placeholder="Escribe tu pregunta aquí..." />
+    <input id="entrada" placeholder="¿Qué quieres saber?" />
     <button onclick="enviar()">Enviar</button>
   </div>
 
   <script>
-    const personalidad = "Eres un asistente de transporte de mercancías internacional. Respondes en español, de forma breve.";
+    const personalidad = "Eres un asistente muy amable que anima al usuario, y sabes de psicología humana. Respondes en español, de forma amigable y dulce.";
 
     async function enviar() {
       const texto = document.getElementById('entrada').value.trim();
       const apiKey = document.getElementById('api-key').value.trim();
       if (!texto) return;
-      if (!apiKey) { alert('Por favor, pega tu API Key arriba antes de enviar.'); return; }
+      if (!apiKey) { alert('Por favor, pega tu código arriba antes de enviar.'); return; }
       mostrarMensaje('Tú', texto, 'usuario');
       document.getElementById('entrada').value = '';
       mostrarMensaje('Bot', '...', 'bot');
@@ -72,7 +72,7 @@
         if (datos.error) return "Error: " + datos.error.message;
         return datos.choices[0].message.content;
       } catch (error) {
-        return "Error de conexión. Revisa la API Key e inténtalo de nuevo.";
+        return "Error de conexión :( . Revisa el código e inténtalo de nuevo.";
       }
     }
 
