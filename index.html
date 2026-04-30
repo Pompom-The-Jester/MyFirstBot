@@ -22,18 +22,18 @@
   <h2>My First Bot</h2>
 
   <div id="key-zone">
-    🔑 <b>Pega aquí el código</b> (no se guarda ni se sube a ningún sitio):
+    🔑 <b>Pega aquí el código</b> (con muchos números y letras):
     <input type="password" id="api-key" placeholder="gsk_..." />
   </div>
 
   <div id="chat"></div>
   <div class="controles">
-    <input id="entrada" placeholder="¿Qué quieres saber?" />
+    <input id="entrada" placeholder="¿De qué quieres hablar? :)" />
     <button onclick="enviar()">Enviar</button>
   </div>
 
   <script>
-    const personalidad = "Eres un asistente muy amable que anima al usuario, y sabes de psicología humana. Respondes en español, de forma amigable y dulce.";
+    const personalidad = "Eres un asistente muy amable que anima al usuario, y sabes de psicología y comportamiento humano. Respondes en español, de forma amigable y dulce.";
 
     async function enviar() {
       const texto = document.getElementById('entrada').value.trim();
